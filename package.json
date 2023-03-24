@@ -1,0 +1,14 @@
+{
+  "name": "system-stats",
+  "version": "1.0.0",
+  "description": "A little package that displays system information.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CyberGen49",
+  "license": "ISC",
+  "dependencies": {
+    "cli-color": "^2.0.3"
+  }
+}
