@@ -20,7 +20,7 @@ const bar = (min, max, value) => {
 
 async function main() {
     console.log(clc.whiteBright(`System Date & Time:`.padEnd(20)), clc.cyanBright(dayjs().format('MMMM D YYYY, h:mm:ss A')));
-    console.log(clc.whiteBright(`System uptime:`.padEnd(20)), clc.cyanBright(utils.formatSeconds(os.uptime())));
+    console.log(clc.whiteBright(`System uptime:`.padEnd(20)), clc.cyan(utils.getRelativeDate(Date.now()-(os.uptime()*1000)).replace(' ago', '')));
     const memTotal = os.totalmem();
     const memFree = os.freemem();
     const memUsed = memTotal-memFree;
