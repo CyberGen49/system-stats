@@ -28,7 +28,8 @@ async function main() {
         clc.whiteBright(`Memory usage:`.padEnd(20)),
         clc.white(utils.formatSize(memUsed).padStart(10)),
         bar(0, memTotal, memUsed),
-        clc.white(utils.formatSize(memTotal))
+        clc.white(utils.formatSize(memFree).padEnd(10)),
+        clc.blackBright(`${utils.formatSize(memTotal)} total`)
     );
     const space = await diskUsage.check('/');
     const spaceUsed = space.total-space.available;
@@ -36,7 +37,8 @@ async function main() {
         clc.whiteBright(`Disk usage:`.padEnd(20)),
         clc.white(utils.formatSize(spaceUsed).padStart(10)),
         bar(0, space.total, spaceUsed),
-        clc.white(utils.formatSize(space.total))
+        clc.white(utils.formatSize(space.available).padEnd(10)),
+        clc.blackBright(`${utils.formatSize(space.total)} total`)
     );
 }
 main();
