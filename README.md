@@ -1,6 +1,8 @@
 # cyber-system-stats
 A little package that displays system information.
 
+![Demo](/demo.png)
+
 Install with `npm i -g cyber-system-stats`
 
 ## Usage
