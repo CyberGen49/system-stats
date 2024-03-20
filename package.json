@@ -1,6 +1,6 @@
 {
   "name": "cyber-system-stats",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A little executable that displays system information.",
   "main": "main.js",
   "preferGlobal": true,

@@ -85,7 +85,7 @@ const bar = (min, max, value) => {
 async function main() {
     if (args.separate) console.log();
     // Output date and time
-    console.log(clc.whiteBright(`System date and time:`.padEnd(paddingSize)), clc.cyanBright(dayjs().format('YYYY-MM-DD H:mm:ss')));
+    console.log(clc.whiteBright(`System date and time:`.padEnd(paddingSize)), clc.cyanBright(dayjs().format(args.dtformat || 'YYYY-MM-DD H:mm:ss')));
     // Output uptime
     console.log(clc.whiteBright(`System uptime:`.padEnd(paddingSize)), clc.cyan(getRelativeDate(Date.now()-(os.uptime()*1000)).replace(' ago', '')));
     if (args.separate) console.log();
